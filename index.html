@@ -6,6 +6,26 @@
 	<script src="app.js"></script>
 </head>
 <body ng-app="HangmanApp" ng-controller="GameController">
-	{{test}}
+<div>	
+	<div>
+		Guesses Left :: {{guesses}}
+	</div>
+	<div>
+		Your Incorrect Guesses :: <span ng-repeat="letter in  incorrectLetter">{{letter}}</span>
+	</div>
+	<div>
+		Your Correct Guesses :: <span ng-repeat="letter in  correctLetter">{{letter}}</span>
+	</div>
+
+	<div>You have to guess: {{displayWord}}</div>
+
+	<div>
+		<div>
+			<input type="text" name="guess" ng-model="input.letter">
+			<button ng-click="letterchosen()">Submit</button>
+		</div>
+	</div>
+
+</div>
 </body>
 </html>
